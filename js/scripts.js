@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $("form#quiz").submit(function(event){
-    event.preventDefault();
+
     var charlie=0;
     var mac=0;
     var dee=0;
@@ -30,17 +30,47 @@ $(document).ready(function(){
     }
     if(charlie>mac && charlie>dee && charlie >dennis && charlie>frank){
       $("#charlie").show();
+      $("#mac").hide();
+      $("#dennis").hide();
+      $("#dee").hide();
+      $("#frank").hide();
+      $("#cricket").hide();
     }else if(mac>charlie && mac>dee && mac >dennis && mac>frank){
       $("#mac").show();
+      $("#charlie").hide();
+      $("#dennis").hide();
+      $("#dee").hide();
+      $("#frank").hide();
+      $("#cricket").hide();
     }else if(dee>charlie && dee>mac && dee >dennis && dee>frank){
       $("#dee").show();
+      $("#mac").hide();
+      $("#dennis").hide();
+      $("#charlie").hide();
+      $("#frank").hide();
+      $("#cricket").hide();
     }else if(dennis>charlie && dennis>dee && dennis >mac && dennis>frank){
       $("#dennis").show();
+      $("#mac").hide();
+      $("#charlie").hide();
+      $("#dee").hide();
+      $("#frank").hide();
+      $("#cricket").hide();
     }else if(frank>charlie && frank>dee && frank >dennis && frank>mac){
       $("#frank").show();
+      $("#mac").hide();
+      $("#dennis").hide();
+      $("#dee").hide();
+      $("#charlie").hide();
+      $("#cricket").hide();
     }else{
       $("#cricket").show();
+      $("#mac").hide();
+      $("#dennis").hide();
+      $("#dee").hide();
+      $("#frank").hide();
+      $("#charlie").hide();
     }
-
+event.preventDefault();
   });
 });
